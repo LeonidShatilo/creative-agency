@@ -1,0 +1,64 @@
+{
+  "name": "creative-agency",
+  "version": "1.0.0",
+  "description": "Cross-browser layout of a single-page site.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonidShatilo/creative-agency.git"
+  },
+  "keywords": [
+    "layout",
+    "frontend",
+    "html",
+    "scss"
+  ],
+  "author": "Leonid Shatilo <shatiloleonid@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonidShatilo/creative-agency/issues"
+  },
+  "homepage": "https://github.com/LeonidShatilo/creative-agency#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.10",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^8.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.1.3",
+    "css-minimizer-webpack-plugin": "^1.3.0",
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.2",
+    "mini-css-extract-plugin": "^1.3.9",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.26.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
