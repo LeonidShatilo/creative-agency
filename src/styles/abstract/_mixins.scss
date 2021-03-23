@@ -3,3 +3,8 @@
   color: $text-color;
   text-transform: uppercase;
 }
+
+@mixin font-open-sans {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: $text-color;
+}
