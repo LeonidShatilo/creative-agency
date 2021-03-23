@@ -1,0 +1,54 @@
+.about {
+  max-width: 100vw;
+
+  &__wrapper {
+    position: relative;
+    top: -300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__image {
+    margin-right: 40px;
+    max-width: 458px;
+
+    & img {
+      width: 100%;
+      min-width: 300px;
+    }
+  }
+
+  &__description {
+    @include font-open-sans;
+    max-width: 542px;
+    font-size: 1.6rem;
+    line-height: 1.88;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+}
+
+.title {
+  @include font-montserrat;
+  position: relative;
+  display: block;
+  margin: 22px 0 17px 0;
+  font-size: 3rem;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 1px;
+    width: 67px;
+    height: 21px;
+    background-color: $turquoise-color;
+    z-index: -1;
+  }
+}
