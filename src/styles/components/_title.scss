@@ -1,0 +1,27 @@
+.title {
+  position: relative;
+  display: block;
+  margin: 22px 0 17px 0;
+  @include font-montserrat;
+  font-size: 3rem;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 17px;
+    left: 2px;
+    width: 68px;
+    height: 21px;
+    background-color: $turquoise-color;
+    z-index: -1;
+  }
+
+  &__description {
+    margin-bottom: 101px;
+    text-align: center;
+    @include font-open-sans;
+    font-size: 1.4rem;
+    line-height: 1.71;
+  }
+}
