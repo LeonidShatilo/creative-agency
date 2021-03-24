@@ -16,12 +16,13 @@
     & img {
       width: 100%;
       min-width: 300px;
+      object-fit: contain;
     }
   }
 
   &__description {
-    @include font-open-sans;
     max-width: 542px;
+    @include font-open-sans;
     font-size: 1.6rem;
     line-height: 1.88;
   }
@@ -30,25 +31,5 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
-  }
-}
-
-.title {
-  @include font-montserrat;
-  position: relative;
-  display: block;
-  margin: 22px 0 17px 0;
-  font-size: 3rem;
-  z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 17px;
-    left: 1px;
-    width: 67px;
-    height: 21px;
-    background-color: $turquoise-color;
-    z-index: -1;
   }
 }

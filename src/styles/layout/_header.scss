@@ -9,8 +9,8 @@
   }
 
   &__logo {
-    @include font-montserrat;
     padding-top: 43px;
+    @include font-montserrat;
     font-size: 1.8rem;
   }
 }
