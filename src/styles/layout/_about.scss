@@ -1,9 +1,10 @@
 .about {
+  position: relative;
+  top: -322px;
+  padding-top: 22px;
   max-width: 100vw;
 
   &__wrapper {
-    position: relative;
-    top: -300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

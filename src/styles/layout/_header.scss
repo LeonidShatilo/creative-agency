@@ -13,6 +13,7 @@
     @include font-montserrat;
     font-size: 1.8rem;
     cursor: pointer;
+    user-select: none;
   }
 }
 

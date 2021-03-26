@@ -1,12 +1,12 @@
 .portfolio {
+  position: relative;
+  top: -56px;
   max-width: 100vw;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -56px;
   }
 
   &__description-wrapper {
@@ -41,6 +41,8 @@
     font-size: 1.4rem;
     margin: 0 0 29px 0;
     cursor: pointer;
+    transition: color 0.2s linear;
+    user-select: none;
 
     &--active {
       position: relative;
@@ -51,6 +53,10 @@
       color: $white-color;
       background-color: $turquoise-color;
       cursor: default;
+    }
+
+    &:not(.portfolio__category--active):hover {
+      color: lighten($blackberry-color, 30%);
     }
   }
 

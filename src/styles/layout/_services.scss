@@ -1,4 +1,6 @@
 .services {
+  position: relative;
+  top: -182px;
   max-width: 100vw;
 
   &__wrapper {
@@ -6,8 +8,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -182px;
   }
 
   &__description-wrapper {
@@ -60,7 +60,6 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     color: $light-gray-color;
-    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
