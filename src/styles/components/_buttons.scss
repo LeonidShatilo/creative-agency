@@ -7,6 +7,11 @@
   cursor: pointer;
   transition: all 0.3s linear;
 
+  &--small {
+    width: 135px;
+    min-width: 135px;
+  }
+
   &--green {
     background-color: $turquoise-color;
 
@@ -16,7 +21,7 @@
   }
 
   &--white {
-    color: $blackberry-color;
+    color: $turquoise-color;
     background-color: $white-color;
 
     &:hover {
