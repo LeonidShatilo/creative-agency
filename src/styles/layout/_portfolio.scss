@@ -21,7 +21,7 @@
   }
 
   &__list {
-    margin-right: 3.5%;
+    margin-right: 3%;
   }
 
   &__choose-category {
@@ -61,11 +61,17 @@
 
   &__column {
     max-width: 262px;
-    padding-left: 3.85%;
+    margin-left: 3.85%;
   }
 
   &__image {
     width: 100%;
-    margin-bottom: 13.1%;
+    margin-bottom: 13%;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.09);
+    }
   }
 }
