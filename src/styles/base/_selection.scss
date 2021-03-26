@@ -1,0 +1,34 @@
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+span::selection,
+img::selection,
+li::selection,
+input::selection {
+  background: $blackberry-color;
+  color: $white-color;
+}
+
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+p::-moz-selection,
+span::-moz-selection,
+img::-moz-selection,
+li::-moz-selection,
+input::-moz-selection {
+  background: $blackberry-color;
+  color: $white-color;
+}
+
+h1::-webkit-selection,
+h3::-webkit-selection,
+p::-webkit-selection,
+span::-webkit-selection,
+img::-webkit-selection,
+li::-webkit-selection,
+input::-webkit-selection {
+  background: $blackberry-color;
+  color: $white-color;
+}
