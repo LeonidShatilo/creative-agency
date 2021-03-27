@@ -27,8 +27,7 @@
   &__choose-category {
     width: min-content;
     margin-bottom: 49px;
-    @include font-montserrat;
-    font-size: 3rem;
+    @include font-montserrat(3rem, uppercase, $blackberry-color);
   }
 
   &__categories {
@@ -37,11 +36,10 @@
 
   &__category {
     width: fit-content;
-    @include font-montserrat;
-    font-size: 1.4rem;
     margin: 0 0 29px 0;
-    cursor: pointer;
+    @include font-montserrat(1.4rem, uppercase, $blackberry-color);
     transition: color 0.2s linear;
+    cursor: pointer;
     user-select: none;
 
     &--active {

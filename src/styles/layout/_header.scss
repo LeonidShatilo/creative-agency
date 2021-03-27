@@ -10,8 +10,7 @@
 
   &__logo {
     padding-top: 43px;
-    @include font-montserrat;
-    font-size: 1.8rem;
+    @include font-montserrat(1.8rem, uppercase, $blackberry-color);
     cursor: pointer;
     user-select: none;
   }

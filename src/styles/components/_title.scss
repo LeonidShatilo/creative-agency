@@ -2,8 +2,7 @@
   position: relative;
   display: block;
   margin: 22px 0 17px 0;
-  @include font-montserrat;
-  font-size: 3rem;
+  @include font-montserrat(3rem, uppercase, $blackberry-color);
   z-index: 1;
 
   &::before {
@@ -20,8 +19,7 @@
   &__description {
     margin-bottom: 101px;
     text-align: center;
-    @include font-open-sans;
-    font-size: 1.4rem;
+    @include font-open-sans(1.4rem, none, $blackberry-color);
     line-height: 1.71;
   }
 }

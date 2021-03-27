@@ -48,18 +48,14 @@
 
   &__name {
     margin: 15px 0 28px 0;
-    @include font-montserrat;
-    font-size: 1.8rem;
+    @include font-montserrat(1.8rem, uppercase, $blackberry-color);
   }
 
   &__item {
     display: block;
     margin-bottom: 15px;
     width: fit-content;
-    @include font-open-sans;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    color: $light-gray-color;
+    @include font-open-sans(1.4rem, uppercase, $light-gray-color);
 
     &:last-child {
       margin-bottom: 0;

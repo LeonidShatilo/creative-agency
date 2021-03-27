@@ -1,9 +1,7 @@
 .button {
   width: 165px;
   height: 50px;
-  font-size: 1.4rem;
-  @include font-montserrat;
-  color: $white-color;
+  @include font-montserrat(1.4rem, uppercase, $white-color);
   cursor: pointer;
   transition: background 0.3s linear, color 0.3s linear,
     transform 0.15s ease-in-out;

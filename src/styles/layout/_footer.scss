@@ -23,10 +23,7 @@
 
   &__author {
     display: block;
-    @include font-open-sans;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    color: #9a9a9a;
+    @include font-open-sans(1.4rem, uppercase, #9a9a9a);
   }
 
   &__social-media {
@@ -70,10 +67,7 @@
   }
 
   &__item-link {
-    @include font-open-sans;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    color: #9a9a9a;
+    @include font-open-sans(1.4rem, uppercase, #9a9a9a);
     transition: color 0.3s linear;
 
     &:hover {

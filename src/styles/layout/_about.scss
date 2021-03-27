@@ -23,8 +23,7 @@
 
   &__description {
     max-width: 542px;
-    @include font-open-sans;
-    font-size: 1.6rem;
+    @include font-open-sans(1.6rem, none, $blackberry-color);
     line-height: 1.88;
   }
 
