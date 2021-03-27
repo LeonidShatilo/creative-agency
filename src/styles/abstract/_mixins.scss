@@ -11,3 +11,22 @@
   text-transform: $case;
   color: $color;
 }
+
+@mixin display-flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin display-flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
