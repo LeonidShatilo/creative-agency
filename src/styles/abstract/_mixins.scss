@@ -1,10 +1,13 @@
-@mixin font-montserrat {
+@mixin font-montserrat($size, $case, $color) {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  color: $blackberry-color;
-  text-transform: uppercase;
+  font-size: $size;
+  text-transform: $case;
+  color: $color;
 }
 
-@mixin font-open-sans {
+@mixin font-open-sans($size, $case, $color) {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: $blackberry-color;
+  font-size: $size;
+  text-transform: $case;
+  color: $color;
 }
