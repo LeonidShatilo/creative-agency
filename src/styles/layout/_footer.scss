@@ -10,9 +10,7 @@
   }
 
   &__top-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include display-flex-row;
   }
 
   &__bottom-row {
@@ -32,9 +30,7 @@
   }
 
   &__social-media-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex-center;
     margin-right: 18px;
     width: 20px;
     height: 20px;

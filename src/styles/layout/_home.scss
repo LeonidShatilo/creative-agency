@@ -29,15 +29,10 @@
 }
 
 .introduce {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include display-flex-column-center;
 
   &__intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex-center;
     width: 99px;
     height: 33px;
     @include font-montserrat(1.8rem, uppercase, $blackberry-color);
@@ -46,9 +41,7 @@
   }
 
   &__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display-flex-center;
     max-width: 556px;
     min-height: 100px;
     padding: 10px 30px;
