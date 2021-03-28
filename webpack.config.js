@@ -1,6 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
@@ -70,12 +70,11 @@ const cssLoaders = (extra) => {
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        publicPath: (resourcePath, context) => {
-          return path.relative(path.dirname(resourcePath), context) + '../../';
-        },
+        publicPath: (resourcePath, context) => `${path.relative(path.dirname(resourcePath), context)}../../`,
       },
     },
     'css-loader',
+    'postcss-loader',
   ];
 
   if (extra) {
