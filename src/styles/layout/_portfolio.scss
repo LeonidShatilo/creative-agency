@@ -35,23 +35,17 @@
     width: fit-content;
     margin: 0 0 29px 0;
     @include font-montserrat(1.4rem, uppercase, $blackberry-color);
-    transition: color 0.2s linear;
+    transition: color 0.2s ease, background-color 0.2s linear;
     cursor: pointer;
     user-select: none;
 
     &--active {
-      position: relative;
-      right: 19px;
-      width: fit-content;
-      padding: 5px 19px;
-      margin: -5px 0 24px 0;
-      color: $white-color;
-      background-color: $turquoise-color;
+      @include category-active;
       cursor: default;
     }
 
     &:not(.portfolio__category--active):hover {
-      color: lighten($blackberry-color, 30%);
+      @include category-active;
     }
   }
 
