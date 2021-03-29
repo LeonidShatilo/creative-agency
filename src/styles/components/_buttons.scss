@@ -1,36 +1,95 @@
 .button {
+  position: relative;
   width: 165px;
   height: 50px;
   @include font-montserrat(1.4rem, uppercase, $white-color);
-  cursor: pointer;
-  transition: background 0.3s linear, color 0.3s linear,
-    transform 0.15s ease-in-out;
+  background-color: transparent;
+  transition: color 0.4s, transform 0.4s, background-color 0.4s;
+  overflow: hidden;
   user-select: none;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: $blackberry-color;
+    border-radius: 50%;
+    transform: translate(-16px, -75px) scale(0.05);
+    transition: transform 0.4s, opacity 0.4s, background-color 0.4s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform-origin: 100px 100px;
+    transform: scale(1) translate(-16px, -75px);
+    opacity: 1;
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
 
   &--small {
     width: 135px;
     min-width: 135px;
+
+    &::after {
+      transform: translate(-32px, -75px) scale(0.05);
+    }
+
+    &:hover::after {
+      transform: scale(1) translate(-32px, -75px);
+    }
   }
 
   &--green {
-    background-color: $turquoise-color;
+    z-index: 0;
 
-    &:hover {
-      background-color: $blackberry-color;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $turquoise-color;
+      transition: opacity 1s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 0;
     }
   }
 
   &--white {
     color: $turquoise-color;
     background-color: $white-color;
+    z-index: 0;
 
     &:hover {
       color: $white-color;
-      background-color: $blackberry-color;
     }
-  }
 
-  &:active {
-    transform: scale(0.93);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white-color;
+      transition: opacity 1s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
   }
 }
