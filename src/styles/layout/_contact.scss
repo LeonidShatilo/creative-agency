@@ -56,9 +56,15 @@
     border: solid 1px rgba(0, 0, 0, 0.1);
     @include font-montserrat(1.2rem, uppercase, $blackberry-color);
     background-color: $white-color;
+    transition: box-shadow 0.4s ease;
 
     &::placeholder {
       color: #cdcdcd;
+    }
+
+    &:focus {
+      border: solid 1px rgba($turquoise-color, 1);
+      box-shadow: 0 0 7px 5px rgba($turquoise-color, 0.3);
     }
   }
 }
