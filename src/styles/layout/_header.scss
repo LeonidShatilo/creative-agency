@@ -7,45 +7,131 @@
   }
 
   &__logo {
-    padding-top: 43px;
+    padding: 43px 0 30px 0;
     @include font-montserrat(1.8rem, uppercase, $blackberry-color);
     cursor: pointer;
     user-select: none;
   }
 }
 
-.menu {
+.hamburger-menu {
   position: relative;
-  padding-top: 15px;
+  display: flex;
+  flex-direction: row-reverse;
   width: 31px;
   height: 15px;
   top: 47px;
-  cursor: pointer;
 
-  &__icon {
+  &__button {
     position: relative;
-    display: block;
-    width: 15px;
-    height: 1px;
-    top: -8px;
-    background-color: $blackberry-color;
+    display: flex;
+    align-items: center;
+    width: 31px;
+    height: 15px;
+    z-index: 15;
+    cursor: pointer;
 
-    &::before,
-    &::after {
-      content: '';
+    & > span,
+    & > span::before,
+    & > span::after {
+      display: block;
       position: absolute;
-      height: 100%;
-      background-color: inherit;
+      width: 100%;
+      height: 1px;
+      background-color: $blackberry-color;
+      transition-duration: 0.25s;
     }
 
-    &::before {
+    & > span {
+      width: 15px;
+    }
+
+    & > span::before {
+      content: '';
       width: 31px;
       top: -7px;
     }
 
-    &::after {
+    & > span::after {
+      content: '';
       width: 23px;
       bottom: -7px;
     }
+
+    &:hover span,
+    &:hover span::before,
+    &:hover span::after {
+      background-color: darken($blackberry-color, 50%);
+    }
+  }
+
+  &__box {
+    display: block;
+    position: fixed;
+    top: -100%;
+    margin-right: -24px;
+    padding: 85px 0 18px 0;
+    min-width: 300px;
+    height: fit-content;
+    visibility: hidden;
+    list-style: none;
+    background-color: lighten($light-gray-color, 39%);
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.25s;
+    z-index: 10;
+  }
+
+  &__item {
+    display: block;
+    padding: 12px 30px;
+    transition-duration: 0.25s;
+
+    &:hover {
+      background-color: $turquoise-color;
+    }
+  }
+
+  &__item-link {
+    @include font-montserrat(1.8rem, uppercase, $blackberry-color);
+    user-select: none;
+  }
+}
+
+#hamburger-menu__toggle {
+  opacity: 0;
+  display: none;
+
+  &:checked ~ .hamburger-menu {
+    position: fixed;
+  }
+
+  &:checked ~ .hamburger-menu__button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+
+    & > span {
+      width: 23px;
+      transform: rotate(45deg);
+    }
+
+    & > span::before {
+      top: 0;
+      width: 23px;
+      transform: rotate(0);
+    }
+
+    & > span::after {
+      top: 0;
+      width: 23px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &:checked ~ .hamburger-menu__box {
+    visibility: visible;
+    top: 0;
   }
 }
