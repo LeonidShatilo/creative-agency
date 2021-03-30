@@ -2,7 +2,9 @@
   position: relative;
   display: block;
   margin: 22px 0 17px 0;
+  width: fit-content;
   @include font-montserrat(3rem, uppercase, $blackberry-color);
+  user-select: none;
   z-index: 1;
 
   &::before {
@@ -13,7 +15,12 @@
     width: 68px;
     height: 21px;
     background-color: $turquoise-color;
+    transition: left 2s ease;
     z-index: -1;
+  }
+
+  &:hover::before {
+    left: calc(100% - 68px);
   }
 
   &__description {
