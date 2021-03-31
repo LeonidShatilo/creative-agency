@@ -43,6 +43,7 @@
     @include display-flex-center;
     max-width: 556px;
     min-height: 100px;
+    margin: 0;
     padding: 10px 30px;
     border: 10px solid $blackberry-color;
     text-align: center;
@@ -50,7 +51,7 @@
     user-select: none;
   }
 
-  &__subtitle {
+  &__description {
     margin-top: 30px;
     max-width: 540px;
     text-align: center;
