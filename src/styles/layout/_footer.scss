@@ -21,7 +21,7 @@
 
   &__author {
     display: block;
-    @include font-open-sans(1.4rem, uppercase, #9a9a9a);
+    @include font-open-sans(1.4rem, uppercase, $light-gray-color-2);
   }
 
   &__social-media {
@@ -40,7 +40,7 @@
     }
 
     &:hover .footer__social-media-icon path {
-      fill: darken($light-gray-color, 40%);
+      fill: darken($light-gray-color, 50%);
     }
   }
 
@@ -63,11 +63,11 @@
   }
 
   &__item-link {
-    @include font-open-sans(1.4rem, uppercase, #9a9a9a);
+    @include font-open-sans(1.4rem, uppercase, $light-gray-color-2);
     transition: color 0.3s linear;
 
     &:hover {
-      color: darken(#9a9a9a, 40%);
+      color: darken($light-gray-color-2, 50%);
     }
   }
 }
