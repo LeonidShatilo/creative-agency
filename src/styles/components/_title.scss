@@ -7,6 +7,16 @@
   user-select: none;
   z-index: 1;
 
+  @media screen and (max-width: $tablet-width) {
+    margin: 15px 0;
+    font-size: subtractPercent(3rem, 0.2);
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    margin: 10px 0;
+    font-size: subtractPercent(3rem, 0.3);
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -17,10 +27,31 @@
     background-color: $turquoise-color;
     transition: left 2s ease;
     z-index: -1;
+
+    @media screen and (max-width: $tablet-width) {
+      top: subtractPercent(17px, 0.2);
+      left: 1px;
+      width: subtractPercent(68px, 0.2);
+      height: subtractPercent(21px, 0.2);
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      top: subtractPercent(17px, 0.3);
+      width: subtractPercent(68px, 0.3);
+      height: subtractPercent(21px, 0.3);
+    }
   }
 
   &:hover::before {
     left: calc(100% - 68px);
+
+    @media screen and (max-width: $tablet-width) {
+      left: calc(100% - 54px);
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      left: calc(100% - 48px);
+    }
   }
 
   &__description {
@@ -28,5 +59,20 @@
     text-align: center;
     @include font-open-sans(1.4rem, none, $blackberry-color);
     line-height: 1.71;
+
+    @media screen and (max-width: $laptop-width) {
+      max-width: 600px;
+      margin-bottom: 70px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 450px;
+      margin-bottom: 50px;
+      line-height: normal;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin-bottom: 30px;
+    }
   }
 }

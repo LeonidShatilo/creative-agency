@@ -1,6 +1,18 @@
 .portfolio {
-  margin-top: 120px;
   max-width: 100vw;
+  margin-top: 120px;
+
+  @media screen and (max-width: $laptop-width) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    margin-top: 13px;
+  }
+
+  @media screen and (max-width: 510px) {
+    margin-top: 30px;
+  }
 
   &__wrapper {
     display: flex;
@@ -10,42 +22,105 @@
 
   &__description-wrapper {
     max-width: 767px;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 450px;
+    }
   }
 
   &__content {
     @include display-flex-row;
     width: 100%;
+
+    @media screen and (max-width: $tablet-width) {
+      @include display-flex-column-center;
+    }
   }
 
   &__list {
     margin-right: 3%;
+
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
   }
 
   &__choose-category {
     width: min-content;
     margin-bottom: 49px;
     @include font-montserrat(3rem, uppercase, $blackberry-color);
+
+    @media screen and (max-width: $tablet-width) {
+      width: fit-content;
+      margin-bottom: 20px;
+      font-size: 1.6rem;
+    }
   }
 
   &__categories {
     padding-left: 19px;
+
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      padding: 0;
+    }
   }
 
   &__category {
+    position: relative;
     width: fit-content;
     margin: 0 0 29px 0;
     @include font-montserrat(1.4rem, uppercase, $blackberry-color);
-    transition: color 0.2s ease, background-color 0.2s linear;
+    transition: color 0.25s ease;
     cursor: pointer;
     user-select: none;
 
-    &--active {
-      @include category-active;
-      cursor: default;
+    @media screen and (max-width: $tablet-width) {
+      margin: 0 25px 20px 0;
+      font-size: 1.4rem;
     }
 
-    &:not(.portfolio__category--active):hover {
-      @include category-active;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: -14px;
+      top: -2px;
+      width: calc(100% + 28px);
+      height: calc(100% + 4px);
+      background-color: $turquoise-color;
+      transition: opacity 0.25s ease;
+      opacity: 0;
+      z-index: -1;
+
+      @media screen and (max-width: $tablet-width) {
+        left: -10px;
+        width: calc(100% + 20px);
+      }
+    }
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &--active {
+      color: $white-color;
+      cursor: default;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:not(.portfolio__category--active):hover::before {
+      opacity: 1;
     }
   }
 
@@ -57,6 +132,26 @@
   &__column {
     max-width: 262px;
     margin-left: 3.85%;
+
+    @media screen and (max-width: $tablet-width) {
+      margin: 10px 0 0 15px;
+
+      &:first-child {
+        margin: 10px 0 0 0;
+      }
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      &:first-child {
+        margin: 0;
+      }
+
+      margin: 0 0 0 10px;
+    }
   }
 
   &__image {
@@ -65,8 +160,20 @@
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin-bottom: 10px;
+    }
+
     &:hover {
       transform: scale(1.09);
+
+      @media screen and (max-width: $tablet-width) {
+        transform: scale(1.05);
+      }
     }
   }
 }

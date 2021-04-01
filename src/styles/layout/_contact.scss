@@ -4,20 +4,66 @@
   min-height: 330px;
   background-color: $turquoise-color;
 
+  @media screen and (max-width: $laptop-width) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    margin-top: 35px;
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    margin-top: 20px;
+  }
+
   &__wrapper {
     @include display-flex-row;
     padding: 4.39% 0;
+
+    @media screen and (max-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 30px 0;
+    }
+
+    @media screen and (max-width: $mobile-s-width) {
+      padding: 15px 0;
+    }
   }
 
   &__work {
     margin-right: 2.63%;
+
+    @media screen and (max-width: $tablet-width) {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__work-title {
-    margin-top: -13px;
     max-width: 494px;
+    margin-top: -13px;
     @include font-montserrat(3rem, uppercase, $white-color);
     line-height: 1.6;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 350px;
+      margin: 0 0 10px 0;
+      font-size: 2.6rem;
+      line-height: 1.4;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      max-width: 270px;
+      margin: 0 0 15px 0;
+      font-size: 2rem;
+      line-height: normal;
+    }
+
+    @media screen and (max-width: $mobile-s-width) {
+      max-width: none;
+    }
   }
 
   &__inform {
@@ -28,17 +74,45 @@
     height: fit-content;
     padding: 10px 25px 18px;
     background-color: $white-color;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: max-content;
+      padding: 20px;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      padding: 15px;
+    }
   }
 
   &__inform-title {
     @include font-montserrat(2.4rem, uppercase, $blackberry-color);
     line-height: 1.5;
+
+    @media screen and (max-width: $tablet-width) {
+      font-size: 2.6rem;
+      line-height: 1.4;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      font-size: 2rem;
+      line-height: normal;
+    }
   }
 
-  &__inform-subtitle {
+  &__inform-description {
     margin: 10px 0 25px 0;
     @include font-open-sans(1.6rem, none, $light-gray-color);
     line-height: 1.5;
+
+    @media screen and (max-width: $tablet-width) {
+      text-align: justify;
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      font-size: 1.4rem;
+    }
   }
 
   &__form {
@@ -57,6 +131,21 @@
     @include font-montserrat(1.2rem, uppercase, $blackberry-color);
     background-color: $white-color;
     transition: box-shadow 0.4s ease;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: none;
+      height: 40px;
+      padding: 0 0 0 15px;
+      font-size: 1.1rem;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: $mobile-s-width) {
+      padding: 0 0 0 10px;
+    }
 
     &::placeholder {
       color: #cdcdcd;

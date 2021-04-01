@@ -8,12 +8,24 @@
 
   &__logo {
     position: relative;
-    padding-top: 43px;
+    margin-top: 43px;
     @include font-montserrat(1.8rem, uppercase, $blackberry-color);
     cursor: pointer;
     user-select: none;
     transition: color 0.5s ease-in-out;
     z-index: 1;
+
+    @media screen and (max-width: $laptop-width) {
+      margin-top: 25px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      margin-top: 15px;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin-top: 10px;
+    }
 
     &::before {
       content: '';
@@ -45,6 +57,18 @@
   width: 31px;
   height: 15px;
   top: 47px;
+
+  @media screen and (max-width: $laptop-width) {
+    top: 28px;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    top: 18px;
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    top: 13px;
+  }
 
   &__button {
     position: relative;
@@ -103,6 +127,10 @@
     box-shadow: 1px 0 20px rgba(0, 0, 0, 0.2);
     transition-duration: 0.25s;
     z-index: 10;
+
+    @media screen and (max-width: $mobile-l-width) {
+      min-width: 260px;
+    }
   }
 
   &__item {

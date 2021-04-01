@@ -1,20 +1,47 @@
 .about {
+  max-width: 100vw;
   margin-top: 93px;
   padding-top: 22px;
-  max-width: 100vw;
+
+  @media screen and (max-width: $laptop-width) {
+    margin-top: 60px;
+    padding-top: 15px;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    margin-top: 15px;
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
 
   &__wrapper {
     @include display-flex-row;
+
+    @media screen and (max-width: $tablet-width) {
+      @include display-flex-column-center;
+    }
   }
 
   &__image {
-    margin-right: 40px;
+    margin-right: 3.75%;
     max-width: 458px;
+
+    @media screen and (max-width: $tablet-width) {
+      margin: 0 0 15px 0;
+      max-width: 300px;
+    }
 
     & img {
       width: 100%;
       min-width: 300px;
       object-fit: contain;
+
+      @media screen and (max-width: $tablet-width) {
+        min-width: 150px;
+      }
     }
   }
 
@@ -22,11 +49,22 @@
     max-width: 542px;
     @include font-open-sans(1.6rem, none, $blackberry-color);
     line-height: 1.88;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 450px;
+      font-size: 1.4rem;
+      text-align: justify;
+      line-height: normal;
+    }
   }
 
   &__button {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 33px;
+
+    @media screen and (max-width: $tablet-width) {
+      margin-top: 15px;
+    }
   }
 }
