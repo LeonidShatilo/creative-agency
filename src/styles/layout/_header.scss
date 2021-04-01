@@ -125,27 +125,57 @@
     list-style: none;
     background-color: lighten($light-gray-color, 39%);
     box-shadow: 1px 0 20px rgba(0, 0, 0, 0.2);
-    transition-duration: 0.25s;
+    transition-duration: 0.45s;
     z-index: 10;
+
+    @media screen and (max-width: $laptop-width) {
+      padding: 75px 0 18px 0;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      padding: 65px 0 18px 0;
+    }
 
     @media screen and (max-width: $mobile-l-width) {
       min-width: 260px;
+      padding: 55px 0 18px 0;
     }
   }
 
   &__item {
     display: block;
     padding: 12px 30px;
-    transition-duration: 0.25s;
+    transition-duration: 0.3s;
 
     &:hover {
       background-color: $turquoise-color;
+    }
+
+    &:hover &-link {
+      color: $white-color;
     }
   }
 
   &__item-link {
     @include font-montserrat(1.8rem, uppercase, $blackberry-color);
+    transition-duration: 0.3s;
     user-select: none;
+
+    @media screen and (max-width: $laptop-width) {
+      font-size: 1.7rem;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $mobile-s-width) {
+      font-size: 1.4rem;
+    }
   }
 }
 
