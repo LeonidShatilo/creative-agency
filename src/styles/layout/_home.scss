@@ -32,9 +32,7 @@
     height: 850px;
     background-size: cover;
     background-position: center;
-    background-image: url('assets/images/png/home_bg_img.png');
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    background-image: url('assets/images/jpg/home_bg_img.jpg');
     z-index: -10;
 
     @media screen and (max-width: $laptop-width) {
