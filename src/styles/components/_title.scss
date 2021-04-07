@@ -1,31 +1,31 @@
 .title {
   position: relative;
-  display: block;
-  margin: 22px 0 17px;
-  width: fit-content;
+  display: table;
+  margin: 22px auto;
+
   @include font-montserrat(3rem, uppercase, $blackberry-color);
   user-select: none;
   z-index: 1;
 
   @media screen and (max-width: $tablet-width) {
-    margin: 15px 0;
+    margin: 15px auto;
     font-size: subtractPercent(3rem, 0.2);
   }
 
   @media screen and (max-width: $mobile-l-width) {
-    margin: 10px 0;
+    margin: 10px auto;
     font-size: subtractPercent(3rem, 0.3);
   }
 
   &::before {
     content: '';
+    display: block;
     position: absolute;
     top: 17px;
     left: 2px;
     width: 68px;
     height: 21px;
     background-color: $turquoise-color;
-    transition: left 2s ease;
     z-index: -1;
 
     @media screen and (max-width: $tablet-width) {
@@ -39,18 +39,6 @@
       top: subtractPercent(17px, 0.3);
       width: subtractPercent(68px, 0.3);
       height: subtractPercent(21px, 0.3);
-    }
-  }
-
-  &:hover::before {
-    left: calc(100% - 68px);
-
-    @media screen and (max-width: $tablet-width) {
-      left: calc(100% - 54px);
-    }
-
-    @media screen and (max-width: $mobile-l-width) {
-      left: calc(100% - 48px);
     }
   }
 

@@ -4,25 +4,26 @@
   &__overlay {
     position: absolute;
     width: 100%;
-    height: 850px;
+    height: 851px;
+    margin: 0;
     background: $overlay-color;
     opacity: 0.85;
     z-index: -9;
 
     @media screen and (max-width: $laptop-width) {
-      height: 705px;
+      height: 706px;
     }
 
     @media screen and (max-width: $tablet-width) {
-      height: 755px;
+      height: 756px;
     }
 
     @media screen and (max-width: $mobile-l-width) {
-      height: 698px;
+      height: 699px;
     }
 
     @media screen and (max-width: $mobile-s-width) {
-      height: 742px;
+      height: 743px;
     }
   }
 
@@ -30,6 +31,7 @@
     position: absolute;
     width: 100%;
     height: 850px;
+    margin: 0;
     background-size: cover;
     background-position: center;
     background-image: url('assets/images/jpg/home_bg_img.jpg');
@@ -70,12 +72,16 @@
 }
 
 .introduce {
-  @include display-flex-column-center;
+  display: table;
+  margin: 0 auto;
 
   &__intro {
-    @include display-flex-center;
+    display: table;
     width: 99px;
     height: 33px;
+    margin: 0 auto;
+    padding-top: 7px;
+    text-align: center;
     @include font-montserrat(1.8rem, uppercase, $blackberry-color);
     background-color: $turquoise-color;
     user-select: none;
@@ -94,11 +100,11 @@
   }
 
   &__title {
-    @include display-flex-center;
-    max-width: 556px;
+    display: table;
+    max-width: 559px;
     min-height: 100px;
-    margin: 0;
-    padding: 10px 30px;
+    margin: 0 auto;
+    padding: 13px 30px;
     border: 10px solid $blackberry-color;
     text-align: center;
     @include font-montserrat(4.8rem, uppercase, $blackberry-color);
@@ -108,8 +114,8 @@
       max-width: subtractPercent(670px, 0.3);
       min-height: subtractPercent(100px, 0.3);
       border: subtractPercent(10px, 0.3) solid $blackberry-color;
-      font-size: subtractPercent(4.8rem, 0.3);
-      padding: subtractPercent(10px, 0.3) subtractPercent(30px, 0.3);
+      font-size: 3.22rem;
+      padding: subtractPercent(13px, 0.3) subtractPercent(30px, 0.3);
     }
 
     @media screen and (max-width: $mobile-l-width) {
@@ -117,17 +123,20 @@
       min-height: subtractPercent(100px, 0.5);
       border: subtractPercent(10px, 0.5) solid $blackberry-color;
       font-size: subtractPercent(4.8rem, 0.5);
-      padding: subtractPercent(10px, 0.5) subtractPercent(30px, 0.5);
+      padding: subtractPercent(13px, 0.5) subtractPercent(30px, 0.5);
     }
   }
 
   &__description {
+    display: table;
+    margin: 0 auto;
     margin-top: 30px;
     max-width: 540px;
     text-align: center;
     @include font-open-sans(1.6rem, none, $blackberry-color);
 
     @media screen and (max-width: $tablet-width) {
+      margin: 0 auto;
       margin-top: 15px;
       max-width: 390px;
       font-size: 1.4rem;

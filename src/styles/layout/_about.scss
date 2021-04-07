@@ -18,20 +18,23 @@
   }
 
   &__wrapper {
-    @include display-flex-row;
+    @include display-flex-row-space-between;
 
     @media screen and (max-width: $tablet-width) {
-      @include display-flex-column-center;
+      display: table;
+      margin: 0 auto;
     }
   }
 
   &__image {
-    margin-right: 3.75%;
     max-width: 458px;
+    height: 100%;
+    margin-right: 3.75%;
 
     @media screen and (max-width: $tablet-width) {
-      margin: 0 0 15px 0;
+      display: table;
       max-width: 300px;
+      margin: 0 auto;
     }
 
     & img {
@@ -41,17 +44,37 @@
 
       @media screen and (max-width: $tablet-width) {
         min-width: 150px;
+        margin-bottom: 15px;
       }
     }
   }
 
-  &__description {
+  &__text {
     max-width: 542px;
-    @include font-open-sans(1.6rem, none, $blackberry-color);
-    line-height: 1.88;
+
+    & > .title {
+      margin: 22px 0;
+
+      @media screen and (max-width: $tablet-width) {
+        margin: 15px 0;
+      }
+
+      @media screen and (max-width: $mobile-l-width) {
+        margin: 10px 0;
+      }
+    }
 
     @media screen and (max-width: $tablet-width) {
       max-width: 450px;
+    }
+  }
+
+  &__description {
+    @include font-open-sans(1.6rem, none, $blackberry-color);
+    width: 100%;
+    line-height: 1.88;
+
+    @media screen and (max-width: $tablet-width) {
       font-size: 1.4rem;
       text-align: justify;
       line-height: normal;
@@ -61,7 +84,7 @@
   &__button {
     display: flex;
     justify-content: flex-end;
-    margin-top: 33px;
+    margin-top: 26px;
 
     @media screen and (max-width: $tablet-width) {
       margin-top: 15px;

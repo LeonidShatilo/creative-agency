@@ -3,7 +3,7 @@
   width: 100%;
 
   &__wrapper {
-    @include display-flex-row;
+    @include display-flex-row-space-between;
   }
 
   &__logo {
@@ -52,11 +52,10 @@
 
 .hamburger-menu {
   position: relative;
-  display: flex;
-  flex-direction: row-reverse;
+  top: 47px;
+  right: 0;
   width: 31px;
   height: 15px;
-  top: 47px;
 
   @media screen and (max-width: $laptop-width) {
     top: 28px;
@@ -115,12 +114,13 @@
 
   &__box {
     display: block;
-    position: fixed;
-    top: -100%;
-    margin-right: -24px;
-    padding: 85px 0 18px 0;
-    min-width: 300px;
+    position: relative;
+    top: -700px;
+    right: 245px;
+    min-width: 291px;
     height: fit-content;
+    margin-right: -24px;
+    padding: 80px 0 18px 0;
     visibility: hidden;
     list-style: none;
     background-color: lighten($light-gray-color, 39%);
@@ -129,16 +129,16 @@
     z-index: 10;
 
     @media screen and (max-width: $laptop-width) {
-      padding: 75px 0 18px 0;
+      padding: 80px 0 18px 0;
     }
 
     @media screen and (max-width: $tablet-width) {
-      padding: 65px 0 18px 0;
+      padding: 75px 0 18px 0;
     }
 
     @media screen and (max-width: $mobile-l-width) {
-      min-width: 260px;
-      padding: 55px 0 18px 0;
+      min-width: 230px;
+      right: 189px;
     }
   }
 
@@ -188,12 +188,6 @@
   }
 
   &:checked ~ .hamburger-menu__button {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-
     & > span {
       width: 23px;
       transform: rotate(45deg);
@@ -214,6 +208,6 @@
 
   &:checked ~ .hamburger-menu__box {
     visibility: visible;
-    top: 0;
+    top: -65px;
   }
 }

@@ -13,21 +13,24 @@
     padding-top: 4.39%;
 
     @media screen and (max-width: $laptop-width) {
-      @include display-flex-column-center;
+      display: table;
+      margin: 0 auto;
       padding-top: 40px;
     }
 
     @media screen and (max-width: $tablet-width) {
-      @include display-flex-column-center;
+      display: table;
+      margin: 0 auto;
       padding-top: 20px;
     }
   }
 
   &__top-row {
-    @include display-flex-row;
+    @include display-flex-row-space-between;
 
     @media screen and (max-width: $laptop-width) {
-      @include display-flex-column-center;
+      display: table;
+      width: 100%;
     }
   }
 
@@ -37,11 +40,12 @@
     margin-top: 2.63%;
 
     @media screen and (max-width: $laptop-width) {
-      margin: 20px 0 40px 0;
+      @include display-flex-column-center;
+      margin-bottom: 40px;
     }
 
     @media screen and (max-width: $tablet-width) {
-      margin: 20px 0;
+      margin: 20px auto;
     }
   }
 
@@ -60,6 +64,8 @@
 
     @media screen and (max-width: $mobile-l-width) {
       max-width: 200px;
+      margin: 0 auto;
+      margin-top: 10px;
     }
   }
 
@@ -69,7 +75,7 @@
   }
 
   &__social-media-link {
-    @include display-flex-center;
+    @include display-flex-column-center;
     margin-right: 18px;
     width: 20px;
     height: 20px;
@@ -94,19 +100,16 @@
 }
 
 .navigation {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  user-select: none;
-
   @media screen and (max-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    padding: 0;
   }
 
   &__item {
+    display: inline-block;
+
     @media screen and (max-width: $tablet-width) {
       margin-bottom: 10px;
     }

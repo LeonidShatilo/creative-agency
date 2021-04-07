@@ -15,13 +15,13 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
   }
 
   &__description-wrapper {
+    display: table;
     max-width: 767px;
+    margin: 0 auto;
 
     @media screen and (max-width: $tablet-width) {
       max-width: 450px;
@@ -29,31 +29,34 @@
   }
 
   &__content {
-    @include display-flex-row;
+    @include display-flex-row-space-between;
     width: 100%;
 
     @media screen and (max-width: $tablet-width) {
-      @include display-flex-column-center;
+      display: table;
+      margin: 0 auto;
     }
   }
 
   &__list {
+    display: inline-block;
+    max-width: 185px;
     margin-right: 3%;
 
     @media screen and (max-width: $tablet-width) {
-      display: flex;
-      flex-direction: column;
+      display: table;
+      width: 100%;
+      max-width: none;
       margin: 0;
     }
   }
 
   &__choose-category {
-    width: min-content;
     margin-bottom: 49px;
     @include font-montserrat(3rem, uppercase, $blackberry-color);
 
     @media screen and (max-width: $tablet-width) {
-      width: fit-content;
+      width: 100%;
       margin-bottom: 20px;
       font-size: 1.6rem;
     }
@@ -63,28 +66,37 @@
     padding-left: 19px;
 
     @media screen and (max-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      height: fit-content;
+      display: block;
+      height: 100%;
       padding: 0;
+      text-align: center;
     }
   }
 
   &__category {
     position: relative;
-    width: fit-content;
+    display: inline-block;
     margin: 0 0 29px 0;
     @include font-montserrat(1.4rem, uppercase, $blackberry-color);
     transition: color 0.25s ease;
     cursor: pointer;
     user-select: none;
 
+    &:first-child {
+      margin-right: 70px;
+    }
+
     @media screen and (max-width: $tablet-width) {
       margin: 0 25px 20px 0;
       font-size: 1.4rem;
+
+      &:first-child {
+        margin: 0 25px 20px 20px;
+      }
+
+      &:last-child {
+        margin: 0 0 20px 0;
+      }
     }
 
     &::before {
@@ -127,6 +139,12 @@
   &__images-wrapper {
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: $tablet-width) {
+      display: inherit;
+      margin: 0 auto;
+      transform: translateX(5px);
+    }
   }
 
   &__column {
@@ -134,10 +152,12 @@
     margin-left: 3.85%;
 
     @media screen and (max-width: $tablet-width) {
-      margin: 10px 0 0 15px;
+      display: table-cell;
+      padding: 0 15px 0 0;
+      margin: 0;
 
       &:first-child {
-        margin: 10px 0 0 0;
+        transform: translateY(-3px);
       }
 
       &:last-child {
@@ -146,15 +166,12 @@
     }
 
     @media screen and (max-width: $mobile-l-width) {
-      &:first-child {
-        margin: 0;
-      }
-
-      margin: 0 0 0 10px;
+      padding: 0 10px 0 0;
     }
   }
 
   &__image {
+    display: table;
     width: 100%;
     margin-bottom: 13%;
     transition: all 0.4s ease-in-out;
@@ -184,7 +201,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
 
   &:active {
@@ -192,6 +209,7 @@
   }
 
   &:hover .show-more__icon path {
+    transition: all 0.4s ease;
     stroke: $blackberry-color;
   }
 
@@ -204,6 +222,7 @@
   }
 
   &__icon {
+    display: inline-block;
     width: 24px;
     height: 24px;
     animation: arrow-down ease 3.3s infinite;
@@ -211,11 +230,13 @@
 
     &-svg path {
       stroke: lighten($blackberry-color, 35%);
-      transition: stroke 0.4s ease;
+      transition: all 0.4s ease;
     }
   }
 
   &__button {
+    position: relative;
+    top: -7px;
     @include font-montserrat(
       1.4rem,
       uppercase,
@@ -228,7 +249,8 @@
   }
 
   @media screen and (max-width: $tablet-width) {
-    display: flex;
+    display: table;
+    margin: 0 auto;
   }
 }
 
