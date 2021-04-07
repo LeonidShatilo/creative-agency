@@ -1,0 +1,162 @@
+.services {
+  max-width: 100vw;
+  margin-top: 120px;
+
+  @media screen and (max-width: $laptop-width) {
+    margin-top: 70px;
+  }
+
+  @media screen and (max-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+  }
+
+  &__description-wrapper {
+    max-width: 718px;
+    display: table;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @media screen and (max-width: $laptop-width) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__elements-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 590px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding-top: 15px;
+
+    @media screen and (max-width: $laptop-width) {
+      justify-content: center;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      justify-content: center;
+      min-height: auto;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin: 0 auto;
+    }
+  }
+
+  &__element {
+    width: 245px;
+    height: fit-content;
+    margin: 0 20px 37px 0;
+
+    &:last-child {
+      margin: 0 20px 0 0;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      width: 220px;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+
+    @media screen and (max-width: $tablet-width) {
+      width: 26px;
+      height: 26px;
+    }
+
+    &-svg path {
+      stroke: $blackberry-color;
+    }
+  }
+
+  &__name {
+    margin: 15px 0 28px 0;
+    @include font-montserrat(1.8rem, uppercase, $blackberry-color);
+
+    @media screen and (max-width: $tablet-width) {
+      margin: 12px 0 18px 0;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__item {
+    display: block;
+    width: fit-content;
+    margin-bottom: 15px;
+    @include font-open-sans(1.4rem, uppercase, $light-gray-color);
+
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-left: 40px;
+    max-width: 457px;
+    height: 100%;
+
+    @media screen and (max-width: $laptop-width) {
+      max-width: 438px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    & img {
+      width: 100%;
+      min-width: 300px;
+      object-fit: contain;
+
+      @media screen and (max-width: $tablet-width) {
+        min-width: 150px;
+      }
+    }
+  }
+}

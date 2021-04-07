@@ -1,0 +1,17 @@
+@import '~normalize.css';
+@import './src/styles/abstract/_variables.scss';
+@import './src/styles/abstract/_functions.scss';
+@import './src/styles/abstract/_fonts.scss';
+@import './src/styles/abstract/_mixins.scss';
+@import './src/styles/base/_base.scss';
+@import './src/styles/base/_selection.scss';
+@import './src/styles/components/_buttons.scss';
+@import './src/styles/components/_title.scss';
+@import './src/styles/base/_container.scss';
+@import './src/styles/layout/_header.scss';
+@import './src/styles/layout/_home.scss';
+@import './src/styles/layout/_about.scss';
+@import './src/styles/layout/_services.scss';
+@import './src/styles/layout/_portfolio.scss';
+@import './src/styles/layout/_contact.scss';
+@import './src/styles/layout/_footer.scss';

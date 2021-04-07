@@ -1,0 +1,11 @@
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+span::selection,
+img::selection,
+li::selection,
+input::selection {
+  background: $blackberry-color;
+  color: $white-color;
+}

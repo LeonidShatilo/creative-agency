@@ -1,0 +1,138 @@
+.button {
+  position: relative;
+  width: 165px;
+  height: 50px;
+  @include font-montserrat(1.4rem, uppercase, $white-color);
+  background-color: transparent;
+  transition: color 0.4s, transform 0.4s, background-color 0.4s;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+
+  @media screen and (max-width: $tablet-width) {
+    width: subtractPercent(165px, 0.2);
+    height: subtractPercent(50px, 0.2);
+    font-size: 1.2rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: $blackberry-color;
+    border-radius: 50%;
+    transform: translate(-16px, -75px) scale(0.05);
+    transition: transform 0.4s, opacity 0.4s, background-color 0.4s;
+    opacity: 0;
+    z-index: -1;
+
+    @media screen and (max-width: $tablet-width) {
+      width: subtractPercent(200px, 0.2);
+      height: subtractPercent(200px, 0.2);
+      transform: translate(-13px, -60px) scale(0.05);
+    }
+  }
+
+  &:hover::after {
+    transform-origin: 100px 100px;
+    transform: translate(-16px, -75px) scale(1);
+    opacity: 1;
+
+    @media screen and (max-width: $tablet-width) {
+      transform-origin: 80px 80px;
+      transform: translate(-13px, -60px) scale(1);
+    }
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
+
+  &--small {
+    width: 135px;
+    min-width: 135px;
+
+    @media screen and (max-width: $tablet-width) {
+      width: subtractPercent(135px, 0.2);
+      min-width: subtractPercent(135px, 0.2);
+    }
+
+    @media screen and (max-width: $mobile-s-width) {
+      width: 80px;
+      min-width: 80px;
+    }
+
+    &::after {
+      transform: translate(-32px, -75px) scale(0.05);
+
+      @media screen and (max-width: $tablet-width) {
+        transform: translate(-27px, -60px) scale(0.05);
+      }
+
+      @media screen and (max-width: $mobile-s-width) {
+        transform: translate(-40px, -60px) scale(0.05);
+      }
+    }
+
+    &:hover::after {
+      transform: translate(-32px, -75px) scale(1);
+
+      @media screen and (max-width: $tablet-width) {
+        transform: translate(-27px, -60px) scale(1);
+      }
+
+      @media screen and (max-width: $mobile-s-width) {
+        transform: translate(-40px, -60px) scale(1);
+      }
+    }
+  }
+
+  &--green {
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $turquoise-color;
+      transition: opacity 1s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+  }
+
+  &--white {
+    color: $turquoise-color;
+    background-color: $white-color;
+    z-index: 0;
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white-color;
+      transition: opacity 1s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.title {
+  position: relative;
+  display: table;
+  margin: 22px auto;
+
+  @include font-montserrat(3rem, uppercase, $blackberry-color);
+  user-select: none;
+  z-index: 1;
+
+  @media screen and (max-width: $tablet-width) {
+    margin: 15px auto;
+    font-size: subtractPercent(3rem, 0.2);
+  }
+
+  @media screen and (max-width: $mobile-l-width) {
+    margin: 10px auto;
+    font-size: subtractPercent(3rem, 0.3);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 2px;
+    width: 68px;
+    height: 21px;
+    background-color: $turquoise-color;
+    z-index: -1;
+
+    @media screen and (max-width: $tablet-width) {
+      top: subtractPercent(17px, 0.2);
+      left: 1px;
+      width: subtractPercent(68px, 0.2);
+      height: subtractPercent(21px, 0.2);
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      top: subtractPercent(17px, 0.3);
+      width: subtractPercent(68px, 0.3);
+      height: subtractPercent(21px, 0.3);
+    }
+  }
+
+  &__description {
+    margin-bottom: 101px;
+    text-align: center;
+    @include font-open-sans(1.4rem, none, $blackberry-color);
+    line-height: 1.71;
+
+    @media screen and (max-width: $laptop-width) {
+      max-width: 600px;
+      margin-bottom: 70px;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 450px;
+      margin-bottom: 50px;
+      line-height: normal;
+    }
+
+    @media screen and (max-width: $mobile-l-width) {
+      margin-bottom: 30px;
+    }
+  }
+}

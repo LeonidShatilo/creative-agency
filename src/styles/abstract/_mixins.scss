@@ -1,0 +1,28 @@
+@mixin font-montserrat($size, $case, $color) {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  text-transform: $case;
+  color: $color;
+}
+
+@mixin font-open-sans($size, $case, $color) {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: $size;
+  font-weight: 400;
+  text-transform: $case;
+  color: $color;
+}
+
+@mixin display-flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin display-flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
