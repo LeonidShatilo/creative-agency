@@ -1,6 +1,6 @@
 # creative-agency
 
-[![Deploy](https://img.shields.io/badge/-Deploy-blue?style=flat)](https://leonidshatilo-creative-agency.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/85a4ee94-f113-464c-819b-f509ab6a70eb/deploy-status)](https://leonidshatilo-creative-agency.netlify.app/)
 
 **Requirements (max result – 5 points):**
 
